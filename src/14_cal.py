@@ -22,3 +22,20 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+
+def pyCal():
+    current_year = datetime.now().year
+    current_month = datetime.now().month
+    if len(sys.argv) == 1:
+        calendar.prmonth(current_year, current_month, w=7, l=5)
+    elif len(sys.argv) == 2:
+        calendar.prmonth(current_year, int(sys.argv[1]), w=7, l=5)
+    elif len(sys.argv) == 3:
+        calendar.prmonth(int(sys.argv[2]), int(sys.argv[1]), w=7, l=5)
+    else:
+        print('Please format your command line execution of the program as: `14_cal.py month(M or MM no 0M!) year(YYYY)`')
+    exit()
+
+
+pyCal()
