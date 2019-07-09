@@ -2,3 +2,8 @@
 # (try doing the same thing in the JS console and see what it outputs)
 
 # YOUR CODE HERE
+n = 2 ** 65536
+print(n)
+
+# py - returns actual integer
+# js - return Infinity
